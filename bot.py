@@ -5,13 +5,12 @@ from telegram.ext import Application, ChatJoinRequestHandler
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(name)
 
-BOT_TOKEN = "8614104917:AAGLfy0Xut-B-g6BW95C8-mv7eHFap3JEoA"
-CHANNEL_ID = -1001971781694
+BOT_TOKEN = "8949333597:AAFm6fM1JFkWJzWhzONUF8U3GDqupejCQF8"
 
 WELCOME_MESSAGE = """Qoutex Compounding series group click this link 🔗 👇
 
-https://t.me/+38IXH_QUK6EyMWY1
-https://t.me/+38IXH_QUK6EyMWY1
+https://t.me/+bVcfKICihac0NTI1
+https://t.me/+bVcfKICihac0NTI1
 
 🔥 Just 2 Days Challenge! 🔥
 Turn $10 → $500 💸
