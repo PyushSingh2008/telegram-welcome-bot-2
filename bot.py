@@ -6,7 +6,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(name)
 
 BOT_TOKEN = "8949333597:AAFm6fM1JFkWJzWhzONUF8U3GDqupejCQF8"
-IMAGE_URL = "https://i.ibb.co/Qj98sm31/photo-2026-05-15-22-03-17.jpg"
+IMAGE_URL = "https://ibb.co/B5QXY1B8/photo-2026-05-15-22-03-17.jpg"
 
 WELCOME_MESSAGE = (
     "Qoutex Compounding series group click this link 🔗 👇\n\n"
