@@ -3,36 +3,34 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, ChatJoinRequestHandler
 
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+logger = logging.getLogger(name)
 
 BOT_TOKEN = "8949333597:AAFm6fM1JFkWJzWhzONUF8U3GDqupejCQF8"
+IMAGE_URL = "https://i.ibb.co/Qj98sm31/photo-2026-05-15-22-03-17.jpg"
 
-WELCOME_MESSAGE = """Qoutex Compounding series group click this link 🔗 👇
-
-https://t.me/+bVcfKICihac0NTI1
-https://t.me/+bVcfKICihac0NTI1
-
-🔥 Just 2 Days Challenge! 🔥
-Turn $10 → $500 💸
-Limited slots — Join Fast & Start Earning Now! 🚀"""
+WELCOME_MESSAGE = (
+    "Qoutex Compounding series group click this link 🔗 👇\n\n"
+    "https://t.me/+bVcfKICihac0NTI1"
+    "https://t.me/+bVcfKICihac0NTI1\n\n"
+    "🔥 Just 2 Days Challenge! 🔥\n"
+    "Turn $10 → $500 💸\n"
+    "Limited slots — Join Fast & Start Earning Now! 🚀"
+)
 
 async def handle_join_request(update, context):
     user = update.chat_join_request.from_user
     chat_id = user.id
-    
-    keyboard = [[InlineKeyboardButton("✅ Join Group Now", url="https://t.me/+38IXH_QUK6EyMWY1")]]
+    keyboard = [[InlineKeyboardButton("✅ Join Group Now", url="https://t.me/+bVcfKICihac0NTI1")]]
     reply_markup = InlineKeyboardMarkup(keyboard)
-    
     try:
         await context.bot.send_photo(
             chat_id=chat_id,
-            photo="https://i.imgur.com/REPLACE_THIS.jpg",
+            photo=IMAGE_URL,
             caption=WELCOME_MESSAGE,
             reply_markup=reply_markup
         )
         logger.info(f"Welcome sent to {user.first_name}")
-        await update.chat_join_request.approve()
-        
+        # await update.chat_join_request.approve()
     except Exception as e:
         logger.error(f"Error: {e}")
 
